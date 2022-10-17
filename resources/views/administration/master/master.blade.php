@@ -8,6 +8,7 @@
     <title>GDP-@yield('titre','Home')</title>
 
     <link rel="stylesheet" href="{{mix('css/app.css')}}">
+    @livewireStyles
 </head>
 
 <body class="hold-transition sidebar-mini">
@@ -23,7 +24,7 @@
                         </div>
                         <div class="col-sm-6">
                             <ol class="breadcrumb float-sm-right">
-                                @if (url()->previous())
+                                @if (url()->previous() != url()->current() )
                                 <li class="breadcrumb-item active"><a href="{{url()->previous()}}">{{strstr(app('router')->getRoutes()->match(app('request')->create(url()->previous()))->getName(),'.',true)}}</a></li>
                                 @endif
                                 <li class="breadcrumb-item">{{strstr(Route::currentRouteName(),'.',true)}}</li>
@@ -34,13 +35,11 @@
             </div>
             <div class="content">
                 @yield('content')
-                {{request()->route()->getName()}}
             </div>
         </div>
 
 
         @include('administration.layouts.profile')
-
 
         <footer class="main-footer">
 
@@ -54,6 +53,7 @@
     </div>
 
     <script src="{{mix('js/app.js')}}"></script>
+    @livewireScripts
 </body>
 
 </html>

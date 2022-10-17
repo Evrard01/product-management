@@ -2,9 +2,11 @@
 
 use App\Http\Controllers\AchatController;
 use App\Http\Controllers\ProduitController;
+use App\Http\Controllers\TypeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Models\Type;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,7 +20,7 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('pubpages/index');
+    return view('welcome');
 });
 Auth::routes();
 
@@ -26,3 +28,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::resource('/utilisateurs',UserController::class);
 Route::resource('/produits',ProduitController::class);
 Route::resource('/achats',AchatController::class);
+Route::resource('/type',TypeController::class);

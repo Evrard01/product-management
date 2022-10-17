@@ -14,9 +14,9 @@ class CreateAchatsTable extends Migration
     public function up()
     {
         Schema::create('achats', function (Blueprint $table) {
-            $table->uuid('uuid')->unique();
-            $table->foreignId('user_id');
-            $table->foreignUuid('panier_id')->references('uuid')->on('paniers');
+            $table->id();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('panier_id')->constrained();
             $table->integer('nombreProduit');
             $table->float('prixTotal');
             $table->timestamps();

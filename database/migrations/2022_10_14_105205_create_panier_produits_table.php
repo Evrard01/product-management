@@ -15,8 +15,8 @@ class CreatePanierProduitsTable extends Migration
     {
         Schema::create('panier_produits', function (Blueprint $table) {
             $table->id();
-            $table->foreignUuid('panier_id')->references('uuid')->on('paniers');
-            $table->foreignUuid('produit_id')->references('uuid')->on('produits');
+            $table->foreignId('panier_id')->constrained();
+            $table->foreignId('produit_id')->constrained();
             $table->timestamps();
         });
 

@@ -14,8 +14,8 @@ class CreatePaniersTable extends Migration
     public function up()
     {
         Schema::create('paniers', function (Blueprint $table) {
-            $table->uuid('uuid')->unique();
-            $table->foreignId('user_id');
+            $table->id();
+            $table->foreignId('user_id')->constrained();
             $table->timestamps();
         });
 

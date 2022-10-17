@@ -16,6 +16,8 @@ class TypeController extends Controller
     public function index()
     {
         //
+
+        return view('administration.types.index');
     }
 
     /**

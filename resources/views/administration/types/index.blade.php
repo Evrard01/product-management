@@ -1,7 +1,7 @@
 @extends('administration.master.master')
 
-@section('titre','Utilisateurs')
+@section('titre','Categorie')
 
 @section('content')
-    @livewire('user.user-index')
+    @livewire('categorie.categorie-index')
 @endsection

@@ -61,6 +61,14 @@
                         </li>
                     </ul>
                     <li class="nav-item pt-3">
+                        <a href="{{route('type.index')}}" class="nav-link {{Request()->route()->getName() == ('type.index') ? 'active' : ''}}">
+                            <i class="fa fa-object-group" aria-hidden="true"></i>
+                            <p>
+                                Categorie
+                            </p>
+                        </a>
+                    </li>
+                    <li class="nav-item pt-3">
                         <a href="#" class="nav-link">
                             <i class="fa fa-sitemap" aria-hidden="true"></i>
                             <p>

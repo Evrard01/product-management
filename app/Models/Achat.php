@@ -9,8 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 class Achat extends Model
 {
     use HasFactory;
-    use HasUuid;
-
     protected $guarded=[];
 
 

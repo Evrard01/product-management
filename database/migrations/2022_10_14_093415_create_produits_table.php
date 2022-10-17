@@ -14,8 +14,8 @@ class CreateProduitsTable extends Migration
     public function up()
     {
         Schema::create('produits', function (Blueprint $table) {
-            $table->uuid('uuid')->unique();
-            $table->foreignId('user_id');
+            $table->id();
+            $table->foreignId('user_id')->constrained();
             $table->foreignId('type_id')->constrained();
             $table->string('nom');
             $table->text('description');

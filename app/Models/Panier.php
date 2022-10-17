@@ -9,7 +9,6 @@ use Illuminate\Database\Eloquent\Model;
 class Panier extends Model
 {
     use HasFactory;
-    use HasUuid;
 
     protected $guarded=[];
 

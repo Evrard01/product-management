@@ -31,15 +31,15 @@
                 <li class="list-group-item">
                     <b>
                         Amis
-                    </b> 
+                    </b>
                     <a class="float-right">
                          13 287
                     </a>
                 </li>
             </ul>
-            <div class="btn btn-primary btn-block">
+            <div class="">
                 <b>
-                    <a class="" href="{{ route('logout') }}" onclick="event.preventDefault();
+                    <a class="btn btn-primary btn-block" href="#" onclick="event.preventDefault();
                                  document.getElementById('logout-form').submit();">
                         {{ __('Logout') }}
                     </a>
